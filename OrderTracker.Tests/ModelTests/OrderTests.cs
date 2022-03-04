@@ -17,7 +17,7 @@ namespace OrderTracker.TestTools
     }
 
     [TestMethod]
-    public void GetTitle_ReturnsOrderArguments_String()
+    public void GetTitle_ReturnsOrderTitle_String()
     {
       string orderTitle = "testTitle";
       string orderDescription = "testDescription";
@@ -26,6 +26,18 @@ namespace OrderTracker.TestTools
       Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
       string resultTitle = newOrder.OrderTitle;
       Assert.AreEqual(orderTitle, resultTitle);
+    }
+
+    [TestMethod]
+    public void GetTitle_ReturnsOrderDescription_String()
+    {
+      string orderTitle = "testTitle";
+      string orderDescription = "testDescription";
+      int orderPrice = 10;
+      string orderDate = "testDate";
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      string resultDescription = newOrder.OrderDescription;
+      Assert.AreEqual(orderDescription, resultDescription);
     }
   }
 }
