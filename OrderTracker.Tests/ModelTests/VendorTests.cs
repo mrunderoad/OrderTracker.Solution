@@ -6,13 +6,13 @@ using System;
 namespace OrderTracker.Tests
 {
   [TestClass]
-  public class VandorTests //: IDisposable
+  public class VandorTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Vendor.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
 
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
