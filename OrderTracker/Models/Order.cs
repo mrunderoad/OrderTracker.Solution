@@ -9,11 +9,17 @@ namespace OrderTracker.Models
     public string OrderDescription { get; set; }
     public int OrderPrice { get; set; }
     public string OrderDate { get; set; } 
+    public int Id { get; }
     private static List<Order> _orders = new List<Order> {};
 
-    public Order()
+    public Order(string orderTitle, string orderDescription, int orderPrice, string orderDate)
     {
-      
+      OrderTitle = OrderTitle;
+      OrderDescription = orderDescription;
+      OrderPrice = orderPrice;
+      OrderDate = orderDate;
+      _orders.Add(this);
+      Id = _orders.Count;
     }
   }
 }
