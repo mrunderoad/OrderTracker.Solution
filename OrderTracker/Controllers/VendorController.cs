@@ -30,7 +30,7 @@ namespace OrderTracker.Controllers
     [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
-      Dictionary<string, object> model = new Dictionart<string, object>();
+      Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor selectedVendor = Vendor.Find(id);
       List<Order> vendorOrders = selectedVendor.Orders;
       model.Add("vendor", selectedVendor);
