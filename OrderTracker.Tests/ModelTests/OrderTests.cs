@@ -51,5 +51,17 @@ namespace OrderTracker.TestTools
       int resultPrice = newOrder.OrderPrice;
       Assert.AreEqual(orderPrice, resultPrice);
     }
+
+    [TestMethod]
+    public void GetOrderDate_ReturnsOrderDate_String()
+    {
+      string orderTitle = "testTitle";
+      string orderDescription = "testDescription";
+      int orderPrice = 10;
+      string orderDate = "testDate";
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      string resultDate = newOrder.OrderDate;
+      Assert.AreEqual(orderDate, resultDate);
+    }
   }
 }
