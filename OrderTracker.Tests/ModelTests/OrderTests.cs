@@ -15,5 +15,17 @@ namespace OrderTracker.TestTools
       Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetTitle_ReturnsOrderTitle_String()
+    {
+      string orderTitle = "testTitle";
+      string orderDescription = "testDescription";
+      int orderPrice = 10;
+      string orderDate = "testDate";
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      string result = newOrder.OrderTitle;
+      Assert.AreEqual(orderTitle, result);
+    }
   }
 }
