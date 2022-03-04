@@ -2,3 +2,18 @@
   Layout = "_Layout";
 }
 
+<div class="container">
+  @using OrderTracker.Models;
+  <div class="jumbotron">
+    <h1>Orders for this @Model["vendor"].VendorName</h1>
+  </div>
+
+  <ol>
+    @foreach (Order order in @Model["orders"])
+    {
+      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></li>
+    }
+  </ol>
+
+  <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn-success">Add a new Order</button></a>
+</div>

@@ -10,7 +10,7 @@
   <div class="card">
     <form action="/vendors/@Model.Id/orders" method="post">
       <input for="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-      <label for="orderTitle">Title: </label>
+      <label class="top-margin" for="orderTitle">Title: </label>
       <input id="orderTitle" name="orderTitle" type="text" placeholder="Order Title Goes Here!">
       <label for="orderDescription">Description: </label>
       <input id="orderDescription" name="orderDescription" type="text" placeholder="Order Description Goes Here!">
@@ -18,7 +18,8 @@
       <input id="orderPrice" name="orderPrice" type="number" placeholder="Order Price Goes Here">
       <label for="orderDate">Date: </label>
       <input id="orderDate" name="orderDate" type="date" placeholder="Order Date Goes Here">
-      <button class="btn-success" type="submit">Add Order!</button>
+      <br>
+      <button class="bottom btn-success" type="submit">Add Order!</button>
     </form>
   </div>
 </div>

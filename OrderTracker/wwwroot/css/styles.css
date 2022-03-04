@@ -1,0 +1,28 @@
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:8px;
+}
+
+body {
+  text-align: center;
+}
+
+.card {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  
+}
+
+.top-margin {
+  margin-top: 4vh;
+}
+
+.bottom {
+  margin-bottom: 4vh;
+}
+
