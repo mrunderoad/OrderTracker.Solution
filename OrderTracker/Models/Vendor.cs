@@ -15,7 +15,7 @@ namespace OrderTracker.Models
       VendorName = vendorName;
       VendorDescription = vendorDescription;
       _vendors.Add(this);
-      Id = _vendors.Count;
+      // Id = _vendors.Count;
       Orders = new List<Order> {};
     }
   }
