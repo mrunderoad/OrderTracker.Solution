@@ -1,12 +1,12 @@
 @{
   Layout = "_Layout";
 }
-
+@using OrderTracker.Models;
 <div class="container">
   <div class="jumbotron">
     <h1>Order Details</h1>
   </div>
-  <div class="card">
+  <div class="card orderCard">
     <h1>Vendor: @Model["vendor"].VendorName</h1>
     <h2>Order: @Model["order"].OrderTitle</h2>
     <h4>Description:</h4>

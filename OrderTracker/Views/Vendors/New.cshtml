@@ -9,12 +9,18 @@
 
   <div class="card">
     <form action="/vendors" method="post">
-      <label class="top-margin" for="vendorName">Vendor Name: </label>
-      <input id="vendorName" name="vendorName" type="text" placeholder="Vendor Name Goes Here">
-      <label for="vendorDescription">Vendor Description: </label>
-      <input id="vendorDescription" name="vendorDescription" type="text" placeholder="Vendor Description Goes Here">
-      <br>
-      <button class="bottom btn-success" type="submit">Add Vendor</button>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="vendorName">Vendor Name: </label>
+          <input id="vendorName" name="vendorName" type="text" placeholder="Vendor Name Goes Here">
+        </div>
+        <div class="col-md-6">
+          <label for="vendorDescription">Vendor Description: </label>
+          <input id="vendorDescription" name="vendorDescription" type="text" placeholder="Vendor Description Goes Here">
+        </div>
+        <br>
+        <button class="bottombtn btn-success" type="submit">Add Vendor</button>
+      </div>
     </form>
   </div>
 </div>

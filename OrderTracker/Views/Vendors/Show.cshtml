@@ -9,15 +9,15 @@
   </div>
   @if (@Model["orders"].Count == 0)
   {
-    <h4>There are currently no Orders for this Vendor</h4>
-    <p>Please add a new order!</p>
+    <h4 class="none">There are currently no Orders for this Vendor</h4>
+    <p class="none">Please add a new order!</p>
   }
-  <ul>
+  
     @foreach (Order order in @Model["orders"])
     {
-      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></li>
+      <h4 class="none"><a class="link" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></h4>
     }
-  </ul>
+  
 
   <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn-success">Add a new Order</button></a>
 </div>
