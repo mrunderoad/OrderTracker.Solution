@@ -19,7 +19,7 @@ namespace OrderTracker.Models
       OrderPrice = orderPrice;
       OrderDate = orderDate;
       _orders.Add(this);
-      Id = _orders.Count;
+      // Id = _orders.Count;
     }
 
     public static List<Order> GetAll()

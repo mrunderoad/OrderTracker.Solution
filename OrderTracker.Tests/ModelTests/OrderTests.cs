@@ -94,5 +94,17 @@ namespace OrderTracker.TestTools
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsOrderId_Int()
+    {
+      string orderTitle = "testTitle";
+      string orderDescription = "testDescription";
+      int orderPrice = 10;
+      string orderDate = "testDate";
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
