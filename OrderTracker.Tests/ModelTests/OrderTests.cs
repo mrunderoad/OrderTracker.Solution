@@ -6,8 +6,13 @@ using System;
 namespace OrderTracker.TestTools
 {
   [TestClass]
-  public class OrderTests 
+  public class OrderTests : IDisposable
   {
+
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
@@ -62,6 +67,14 @@ namespace OrderTracker.TestTools
       Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
       string resultDate = newOrder.OrderDate;
       Assert.AreEqual(orderDate, resultDate);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> { };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }

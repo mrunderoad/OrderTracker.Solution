@@ -21,5 +21,15 @@ namespace OrderTracker.Models
       _orders.Add(this);
       Id = _orders.Count;
     }
+
+    public static List<Order> GetAll()
+    {
+      return _orders;
+    }
+
+    public static void ClearAll()
+    {
+      _orders.Clear();
+    }
   }
 }
