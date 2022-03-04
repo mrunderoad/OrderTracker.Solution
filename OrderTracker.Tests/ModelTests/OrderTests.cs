@@ -76,5 +76,23 @@ namespace OrderTracker.TestTools
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string orderTitle1 = "testTitle1";
+      string orderDescription1 = "testDescription1";
+      int orderPrice1 = 10;
+      string orderDate1 = "testDate1";
+      string orderTitle2 = "testTitle2";
+      string orderDescription2 = "testDescription2";
+      int orderPrice2 = 15;
+      string orderDate2 = "testDate2";
+      Order newOrder1 = new Order(orderTitle1, orderDescription1, orderPrice1, orderDate1);
+      Order newOrder2 = new Order(orderTitle2, orderDescription2, orderPrice2, orderDate2);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
