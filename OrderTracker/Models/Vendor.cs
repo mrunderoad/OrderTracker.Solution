@@ -23,5 +23,10 @@ namespace OrderTracker.Models
     {
       _vendors.Clear();
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return _vendors;
+    }
   }
 }
