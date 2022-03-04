@@ -5,15 +5,19 @@
 <div class="container">
   @using OrderTracker.Models;
   <div class="jumbotron">
-    <h1>Orders for this @Model["vendor"].VendorName</h1>
+    <h1>Orders for @Model["vendor"].VendorName</h1>
   </div>
-
-  <ol>
+  @if (@Model["orders"].Count == 0)
+  {
+    <h4>There are currently no Orders for this Vendor</h4>
+    <p>Please add a new order!</p>
+  }
+  <ul>
     @foreach (Order order in @Model["orders"])
     {
       <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></li>
     }
-  </ol>
+  </ul>
 
   <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn-success">Add a new Order</button></a>
 </div>

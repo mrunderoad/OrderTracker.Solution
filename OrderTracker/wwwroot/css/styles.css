@@ -1,22 +1,23 @@
-div#header {
+div.header {
   position:fixed;
   top:0px;
   left:0px;
   width:100%;
   color:#CCC;
-  background:#333;
+  background:rgba(235, 70, 70, 0.671);
   padding:8px;
 }
 
 body {
   text-align: center;
+  background-color: #CCC;
 }
 
-.card {
+/* .card {
   margin-left: 10vw;
   margin-right: 10vw;
   
-}
+} */
 
 .top-margin {
   margin-top: 4vh;
@@ -24,5 +25,42 @@ body {
 
 .bottom {
   margin-bottom: 4vh;
+}
+
+.jumbotron {
+  margin-top: 10vh;
+}
+
+.pic1 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcKD9gVemW6XRyteA-CZM6MuPGcs1I9px5CA&usqp=CAU");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.pic2 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ-ryfopAYxtup_ydxo54KFeG2f-SPjGzWTg&usqp=CAU");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.pic3 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCiTZcTHfkwVBrSxv5Q7Sy9fRC-_STcDuFMpvdLz6tHdBXJayG0Vr4n2xG9XgXdQDlJC8&usqp=CAU");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.col-md-3 {
+  
+}
+
+#orderTitle, #orderDescription, #orderPrice, #orderDate {
+  margin-top: 2vh;
+}
+
+form {
+  background-color: burlywood;
 }
 
