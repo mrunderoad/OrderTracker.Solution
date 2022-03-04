@@ -18,6 +18,10 @@
       <h4 class="none"><a class="link" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></h4>
     }
   
-
-  <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn-success">Add a new Order</button></a>
+  <div class="row" id="btnRow">
+    <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn-success">Add a new Order</button></a>
+    <form action="/orders/delete" method="post">
+      <button class="btn-danger" type="submit" name="button">Clear All Orders</button>
+    </form>
+  </div>
 </div>

@@ -62,7 +62,7 @@ body {
   margin-top: 2vh;
 }
 
-form {
+.formLook {
   background-color: burlywood;
 }
 
@@ -96,5 +96,13 @@ li {
 .orderCard {
   background: rgba(128, 66, 15, 0.856);
   color: white;
+}
+
+.add {
+  margin-top: 5vh;
+}
+
+#btnRow {
+  margin-left: 27vw;
 }
 
