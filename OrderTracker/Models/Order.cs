@@ -14,7 +14,7 @@ namespace OrderTracker.Models
 
     public Order(string orderTitle, string orderDescription, int orderPrice, string orderDate)
     {
-      OrderTitle = OrderTitle;
+      OrderTitle = orderTitle;
       OrderDescription = orderDescription;
       OrderPrice = orderPrice;
       OrderDate = orderDate;
