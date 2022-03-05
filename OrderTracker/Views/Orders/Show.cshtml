@@ -1,22 +1,31 @@
 @{
   Layout = "_Layout";
 }
+
 @using OrderTracker.Models;
 <div class="container">
   <div class="jumbotron">
     <h1>Order Details</h1>
   </div>
   <div class="card orderCard">
-    <h1>Vendor: @Model["vendor"].VendorName</h1>
-    <h2>Order: @Model["order"].OrderTitle</h2>
-    <h4>Description:</h4>
-    <p>@Model["order"].OrderDescription</p>
-    <h4>Price:</h4>
-    <p>$@Model["order"].OrderPrice</p>
-    <h4>Date:</h4>
-    <p>@Model["order"].OrderDate</p>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Vendor: @Model["vendor"].VendorName</h2>
+        <h2>Order: @Model["order"].OrderTitle</h2>
+      </div>
+      <div class="col-md-4">
+        <h4>Description:</h4>
+        <p>@Model["order"].OrderDescription</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Price:</h4>
+        <p>$@Model["order"].OrderPrice</p>
+        <h4>Date:</h4>
+        <p>@Model["order"].OrderDate</p>
+      </div>
+    </div>
   </div>
 
   <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn-success add">Add a new Order!</button></a>
-  
+
 </div>

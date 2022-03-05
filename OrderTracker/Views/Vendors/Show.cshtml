@@ -12,12 +12,10 @@
     <h4 class="none">There are currently no Orders for this Vendor</h4>
     <p class="none">Please add a new order!</p>
   }
-  
-    @foreach (Order order in @Model["orders"])
-    {
-      <h4 class="none"><a class="link" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></h4>
-    }
-  
+  @foreach (Order order in @Model["orders"])
+  {
+    <h4 class="none"><a class="link" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></h4>
+  }
   <div class="row" id="btnRow">
     <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn-success">Add a new Order</button></a>
     <form action="/orders/delete" method="post">

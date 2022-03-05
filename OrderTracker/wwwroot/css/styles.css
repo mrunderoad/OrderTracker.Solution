@@ -106,3 +106,13 @@ li {
   margin-left: 27vw;
 }
 
+.removed {
+  color: white;
+  background: rgba(128, 66, 15, 0.856);
+  margin-top: 10vh;
+}
+
+.other {
+  color: white;
+  background: rgba(128, 66, 15, 0.856);
+}

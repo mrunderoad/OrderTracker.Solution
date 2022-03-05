@@ -26,7 +26,7 @@ _Users are able to add vendors and in each vendor they are able to create an ord
 
 ##### To run tests
 
-* _Clone this repository_
+* _Clone this repository._
 * _Navigate to the OrderTracker.Tests directory in your terminal using `cd OrderTracker.Tests`._
 * _Run `dotnet restore` to restore the bin and obj folders._
 * _Run `dotnet test` to run all tests in the terminal._
