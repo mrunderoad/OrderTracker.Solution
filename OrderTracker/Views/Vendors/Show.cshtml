@@ -6,6 +6,7 @@
   @using OrderTracker.Models;
   <div class="jumbotron">
     <h1>Orders for @Model["vendor"].VendorName</h1>
+    <p>@Model["vendor"].VendorDescription</p>
   </div>
   @if (@Model["orders"].Count == 0)
   {
